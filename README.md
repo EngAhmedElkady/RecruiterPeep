@@ -1,8 +1,8 @@
 # Technical Project
 An API is needed that changes the task status based on a predefined state machine that this task
 must respect.
-So the workflow of the task: draft → active → done → archived. 
-But task can move from any state to archive
+So the workflow of the task: draft → active → done → archived,
+But task can move from any state to archive.
 
 ## Overview
 * Fully working API
