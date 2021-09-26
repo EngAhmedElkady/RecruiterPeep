@@ -2,6 +2,7 @@
 An API is needed that changes the task status based on a predefined state machine that this task
 must respect.
 So the workflow of the task: draft → active → done → archived. 
+But task can move from any state to archive
 
 ## Overview
 * Fully working API
@@ -59,7 +60,7 @@ Vary: Accept
 ]
 ````
 * update data: 
-if you try to update state form 1 to  3
+if you try to update state from 1 to  3
 will raise ValidationError
 
 ````
