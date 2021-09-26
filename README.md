@@ -17,3 +17,8 @@ So the workflow of the task: draft → active → done → archived.
 * Markdown==3.3.4
 * pytz==2021.1
 * sqlparse==0.4.2
+
+## Usage
+'''
+python manage.py runserver
+'''
