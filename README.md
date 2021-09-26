@@ -133,7 +133,7 @@ by the update function in Task_app.models
 
 # Technical problem:
 ## idea:
-* sort the array.   o(nlog)
+* sort the array.   o(nlogn)
 * find the minimum absolute difference between two adjacent elements in the array. o(n)
 
 time : o(nlogn)
