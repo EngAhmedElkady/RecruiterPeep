@@ -19,6 +19,30 @@ So the workflow of the task: draft → active → done → archived.
 * sqlparse==0.4.2
 
 ## Usage
+first runserver
 ````
 python manage.py runserver
 ````
+in Task_app.urls
+````
+from django.urls import path,include
+from . import views
+
+urlpatterns = [
+    path('api/data/', views.Data_list), 
+    path('api/data/<int:pk>', views.Data_detail,name="data_details"),
+
+]
+
+````
+* get all data
+````
+http://127.0.0.1:8000/api/data/
+
+````
+* get data with id 1
+````
+http://127.0.0.1:8000/api/data/1
+````
+
+
