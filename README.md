@@ -58,7 +58,7 @@ Vary: Accept
     }
 ]
 ````
-* updat data
+* updat data: 
 if you try to update state form 1 to  3
 will raise ValidationError
 
@@ -73,5 +73,18 @@ Vary: Accept
         "draft → active → done → archived.you can not move from draft to done,can not move from active or done to draft,and can notmove from archived backward."
     ]
 }
+````
+because validate_State in serializers.py
+````
+ def validate_State(self,value):
+        try:
+            stat1=self.instance.State
+        except:
+            return value
+            
+        if 0 <= (value- stat1) <= 1 or value == 4:
+              return value
+        else:
+            raise serializers.ValidationError("draft → active → done → archived.you can not move from draft to done,can not move from active or done to draft,and can notmove from archived backward.")
 ````
 
