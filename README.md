@@ -44,5 +44,34 @@ http://127.0.0.1:8000/api/data/
 ````
 http://127.0.0.1:8000/api/data/1
 ````
+````
+HTTP 200 OK
+Allow: POST, OPTIONS, GET
+Content-Type: application/json
+Vary: Accept
 
+[
+    {
+        "id": 1,
+        "Title": "ahmed",
+        "State": 1
+    }
+]
+````
+* updat data
+if you try to update state form 1 to  3
+will raise ValidationError
+
+````
+HTTP 400 Bad Request
+Allow: PUT, DELETE, OPTIONS, GET
+Content-Type: application/json
+Vary: Accept
+
+{
+    "State": [
+        "draft → active → done → archived.you can not move from draft to done,can not move from active or done to draft,and can notmove from archived backward."
+    ]
+}
+````
 
