@@ -58,7 +58,7 @@ Vary: Accept
     }
 ]
 ````
-* updat data: 
+* update data: 
 if you try to update state form 1 to  3
 will raise ValidationError
 
