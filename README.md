@@ -88,3 +88,22 @@ because validate_State in serializers.py
             raise serializers.ValidationError("draft → active → done → archived.you can not move from draft to done,can not move from active or done to draft,and can notmove from archived backward.")
 ````
 
+# test
+* test models
+* test views
+* test database
+
+````
+(task_state_api) E:\django\RecruiterPeep\task_state_api>python manage.py test
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.022s
+
+OK
+Destroying test database for alias 'default'...
+
+(task_state_api) E:\django\RecruiterPeep\task_state_api>
+
+````
